@@ -35,11 +35,14 @@ It is currently hosted on firebase. [`https://tttclient-97cf4.firebaseapp.com/`]
 
 * Angular 7
     * HttpClient
+    * Bootstrap
+
 * Node JS
     * Express
     * body-parser
     * cors
     * request
+    * firebase-tools
 
 ## Tests
 * With Input of 2
