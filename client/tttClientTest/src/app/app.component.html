@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+Enter the frequency of words used in TTT Test
+  </h1>
+<div class="input-group mb-3">
+  <!-- <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"></span>
+  </div> -->
+  <form >
+    <input type="text" class="form-control" name="frequency" [(ngModel)]='frequency' placeholder="Frequency" aria-label="Frequency" aria-describedby="basic-addon1">
+    <button type="button" class="btn btn-lg btn-primary" (click)='apiCall()'>Enter the frequency and Submit</button>
+  </form>
+</div>
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Word</th>
+      <th scope="col">Frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let data of dataFromAPI; let i = index'>
+      <th scope="row">{{i}}</th>
+      <td>{{data.heading}}</td>
+      <td>{{data.frequency}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<router-outlet></router-outlet>
