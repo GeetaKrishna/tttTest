@@ -9,10 +9,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors());
 app.use(express.static(__dirname+'/public'))
 
-// app.get('/', function (req, res) {
-// 	res.sendFile(__dirname + '/public/index.html')
-// })
-
+var port = process.env.PORT || 3000;
 
 app.post('/api', function (req, res) {
 	console.log('in API')
@@ -27,8 +24,8 @@ app.post('/api', function (req, res) {
 	})
 })
 
-app.listen(3000, function () {
-	console.log('at 3000')
+app.listen(port, function () {
+	console.log('server at port ', port)
 })
 
 function splitByWords(text) {
