@@ -39,7 +39,7 @@ app.listen(port, function () {
 
 function splitByWords(text) {
 	// split string by spaces (including spaces, tabs, and newlines)
-	var wordsArray = text.split(/\s+/);
+	var wordsArray = text.split(/[ ,]+/);
 	return wordsArray;
 }
 
