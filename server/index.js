@@ -29,7 +29,7 @@ app.post('/api', function (req, res) {
 	})
 }
 else{
-	res.send([{words: 'You cannot find words with this frequency'}])
+	res.send([{words: 'We cannot find words with this frequency, change the input'}])
 }
 })
 
