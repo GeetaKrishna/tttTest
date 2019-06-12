@@ -69,7 +69,7 @@ This hosting is done using the Github pipelining feature of Heroku, for every pu
 * With Input of 1
  ![With Input of 1](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(98).png)
 
-* With Input of 10 or any number above the total existing words
+* With Input of 5
 ![With Input of 10](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(99).png)
 
 * With Input of 10 or any number above the total existing words
