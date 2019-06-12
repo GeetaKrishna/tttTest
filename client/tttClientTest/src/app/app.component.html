@@ -22,8 +22,8 @@ Enter the frequency of words used in TTT Test
   </thead>
   <tbody>
     <tr *ngFor='let data of dataFromAPI; let i = index'>
-      <th scope="row">{{i}}</th>
-      <td>{{data.heading}}</td>
+      <th scope="row">{{i+1}}</th>
+      <td>{{data.fr}}</td>
       <td>{{data.frequency}}</td>
     </tr>
   </tbody>

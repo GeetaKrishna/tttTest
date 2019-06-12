@@ -1,36 +1,26 @@
-var request = require('request');
-var bodyParser = require('body-parser');
-var cors = require('cors');
-var express = require('express');
-var app = express();
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(cors());
-app.use(express.static(__dirname+'/public'))
-
-var port = process.env.PORT || 3000;
-
-app.get('/test', function(req, res){
-	res.send('testing API')
-})
-
-app.post('/api', function (req, res) {
-	console.log('in API')
-	request('http://terriblytinytales.com/test.txt', function (err, response, body) {
-		if (err) {
-			console.log(err)
+			var wordsArray = splitByWords("Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy Lorem Ipsum has been the industry's Lorem Ipsum is simply dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum");
+			test(wordsArray)
+			//console.log(createWordMap('5', wordsArray));
+		
+		
+	function test(wordsArray){
+		//console.log()
+		cc=0
+		f={}
+		for(i in wordsArray){
+			f[wordsArray[i]] = {count: 'none'}
 		}
-		else {
-			var wordsArray = splitByWords(body);
-			res.send(createWordMap(parseInt(req.body.frequency), wordsArray));
+		for (i in f){
+			for(j in wordsArray){
+				if(i==wordsArray[j]){
+					cc++
+				}
+			}
+		console.log(i);
 		}
-	})
-})
-
-app.listen(port, function () {
-	console.log('server at port ', port)
-})
+	}
+	
 
 function splitByWords(text) {
 	// split string by spaces (including spaces, tabs, and newlines)
@@ -51,11 +41,13 @@ function createWordMap(N, wordsArray) {
 		})
 		frequency = [];
 		countArray = Object.keys(wordsMap).map(function(key) {
+			//if(wordsMap[key] === N){
 				return {
 					heading: key,
 					frequency: wordsMap[key],
 					fr: []
 				};
+			//}
 		  });
   countArray.sort(function (a, b) {
     return b.frequency - a.frequency;
@@ -65,10 +57,11 @@ countArray.filter((element, i, arr) => {
 	arr.map(function(key){
 		if(element.frequency === key.frequency){
 			element.fr.push(key.heading)
-			delete element.heading;
 		}
 	})
 })
+
+
 
 function getUnique(arr, comp) {
 
@@ -84,5 +77,6 @@ function getUnique(arr, comp) {
 	 return unique;
   }
 
-	return getUnique(countArray, 'frequency').slice(0, 900);
+//console.log(countArray, 'countArray')
+	return getUnique(countArray, 'frequency');
 }
