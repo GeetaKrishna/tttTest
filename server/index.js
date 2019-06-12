@@ -84,5 +84,5 @@ function getUnique(arr, comp) {
 	 return unique;
   }
 
-	return getUnique(countArray, 'frequency').slice(0, 900);
+	return getUnique(countArray, 'frequency').slice(0, N);
 }
