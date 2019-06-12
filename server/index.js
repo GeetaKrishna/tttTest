@@ -17,6 +17,7 @@ app.get('/test', function(req, res){
 
 app.post('/api', function (req, res) {
 	console.log('in API')
+	if(parseInt(req.body.frequency)>0){
 	request('http://terriblytinytales.com/test.txt', function (err, response, body) {
 		if (err) {
 			console.log(err)
@@ -26,6 +27,10 @@ app.post('/api', function (req, res) {
 			res.send(createWordMap(parseInt(req.body.frequency), wordsArray));
 		}
 	})
+}
+else{
+	res.send([{words: 'You cannot find words with this frequency'}])
+}
 })
 
 app.listen(port, function () {
@@ -49,7 +54,7 @@ function createWordMap(N, wordsArray) {
 				wordsMap[key] = 1;
 			}
 		})
-		frequency = [];
+
 		countArray = Object.keys(wordsMap).map(function(key) {
 				return {
 					heading: key,

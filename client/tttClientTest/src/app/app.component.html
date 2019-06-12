@@ -20,13 +20,16 @@ Enter the frequency of words used in TTT Test
       <th scope="col">Frequency</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngIf='!dataFromAPI[0].words; else errorTemplate'>
     <tr *ngFor='let data of dataFromAPI; let i = index'>
       <th scope="row">{{i+1}}</th>
-      <td>{{data.fr}}</td>
+      <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{data.fr}}</td>
       <td>{{data.frequency}}</td>
     </tr>
   </tbody>
+  <ng-template #errorTemplate>
+    <tbody> {{dataFromAPI[0].words}} </tbody>
+  </ng-template>
 </table>
 </div>
 <router-outlet></router-outlet>

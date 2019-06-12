@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +10,11 @@ export class AppComponent {
   constructor(private http: HttpClient){
 
   }
+  
   title = 'tttClientTest';
   frequency;
   dataFromAPI;
+
   apiCall(){
     console.log('in API Call')
     this.http.post('https://pure-sierra-13501.herokuapp.com/api', {'frequency': this.frequency},{responseType: 'json'}).subscribe((data) => {
