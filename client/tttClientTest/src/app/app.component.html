@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class="container" style="text-align:center">
   <h1>
     Enter the frequency of words used in TTT Test
   </h1>
@@ -8,9 +8,17 @@
     <span class="input-group-text" id="basic-addon1"></span>
   </div> -->
     <form>
-      <input type="text" class="form-control" name="frequency" [(ngModel)]='frequency' placeholder="Frequency"
+      <div style="padding-top: 40px;padding-left: 210px">
+      <div style="width:400px; display: inline-block; padding-right:20px;"> 
+      <input type="text" class="form-control align-center" name="frequency" [(ngModel)]='frequency' placeholder="Frequency"
         aria-label="Frequency" aria-describedby="basic-addon1">
-      <button type="button" class="btn btn-lg btn-primary" (click)='apiCall()'>Enter the frequency and Submit</button>
+     
+      </div>
+      <div style="float: right">
+          <button type="button"  class="btn btn-primary" (click)='apiCall()'>Enter the frequency and Submit</button>
+
+      </div>
+    </div>
     </form>
   </div>
   <ng-template #errorTemplate>

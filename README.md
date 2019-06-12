@@ -45,12 +45,19 @@ It is currently hosted on firebase. [`https://tttclient-97cf4.firebaseapp.com/`]
     * firebase-tools
 
 ## Tests
-* With Input of 2
- ![With Input of 2](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(83).png)
+* With Input of 1
+ ![With Input of 1](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(98).png)
+
+* With Input of 10 or any number above the total existing words
+![With Input of 10](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(99).png)
+
+* With Input of 10 or any number above the total existing words
+![With Input of 10](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(100).png)
 
 * With Input of 100 or any number above the total existing words
-![With Input of 100](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(84).png)
-![With Input of 100](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(85).png)
+![With Input of 100](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(101).png)
+![With Input of 100](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(102).png)
 
 * For inputs of negative integers or Zero (0)
-![Unrelatable Inputs](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(87).png)
+![Unrelatable Inputs](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(96).png)
+![Unrelatable Inputs](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(103).png)
