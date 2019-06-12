@@ -50,4 +50,4 @@ It is currently hosted on firebase. [`https://tttclient-97cf4.firebaseapp.com/`]
 ![With Input of 100](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(85).png)
 
 * For inputs of negative integers or Zero (0)
-![Unrelatable Inputs]()
+![Unrelatable Inputs](https://raw.githubusercontent.com/GeetaKrishna/tttTest/master/Screenshot%20(87).png)
