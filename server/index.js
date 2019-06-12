@@ -11,6 +11,10 @@ app.use(express.static(__dirname+'/public'))
 
 var port = process.env.PORT || 3000;
 
+app.get('/test', function(req, res){
+	res.send('testing API')
+})
+
 app.post('/api', function (req, res) {
 	console.log('in API')
 	request('http://terriblytinytales.com/test.txt', function (err, response, body) {
